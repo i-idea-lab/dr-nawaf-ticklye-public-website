@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental FAQs - Dr Nawaf's Dental Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-placeholder">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Dr Nawaf's</span>
+                    <span class="brand-sub">Dental Clinic</span>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">Meet Dr. Nawaf</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="gallery.html" class="nav-item">Photo Gallery</a>
+                <a href="faqs.html" class="nav-item active">FAQs</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+                <a href="appointment.html" class="nav-cta">
+                    <i class="fa-regular fa-calendar-check"></i> Book an Appointment
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <h1>Frequently Asked Dental Questions</h1>
+        <p>Find clear answers on dental treatments, root canal comfort, teeth whitening, hygiene, and clinic procedures.</p>
+    </section>
+
+    <!-- FAQs Accordion Section -->
+    <main class="section">
+        <div class="section-container" style="max-width: 900px;">
+            <div class="faq-categories">
+                <span class="badge">Patient Information & Guidance</span>
+                <h2 style="font-size: 2rem; margin: 0.5rem 0 1.5rem; color: #0f172a;">Common Questions Answered by Dr. Nawaf</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Got doubts before your visit? Click any question below to see detailed clinical guidance.</p>
+            </div>
+
+            <div class="accordion-list">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is a Root Canal Treatment (RCT) painful?</span>
+                        <i class="fa-solid fa-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>No. With modern local anaesthetics and advanced rotary endodontic equipment used at Dr Nawaf's Dental Clinic, a root canal procedure is as virtually painless as getting a routine filling. The primary objective of an RCT is to relieve your toothache caused by pulp infection, not to cause pain.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How often should I get dental scaling and cleaning?</span>
+                        <i class="fa-solid fa-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>It is medically recommended to have professional ultrasonic dental cleaning every 6 months. Routine scaling removes hardened tartar, bacterial plaque, and surface tea/coffee stains that normal brushing cannot reach, preventing gum disease (gingivitis) and bad breath.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Does professional teeth whitening damage tooth enamel?</span>
+                        <i class="fa-solid fa-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Not when performed under professional clinical supervision. Our clinic uses dental-grade whitening solutions that safely break down deep stains without eroding tooth enamel. Mild temporary sensitivity can occur for 24 hours, but it resolves quickly.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What should I do during an urgent dental emergency?</span>
+                        <i class="fa-solid fa-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>For acute toothache, knocked-out teeth, or broken restorations, rinse gently with warm salt water, avoid chewing on that side, and contact our clinic immediately at <strong>+91 8108736216</strong>. We prioritize same-day emergency appointments to relieve severe pain promptly.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are Dental Implants better than Bridges or Dentures?</span>
+                        <i class="fa-solid fa-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Dental implants are currently the gold standard for tooth replacement because they replace the tooth root into the jawbone. Unlike bridges, implants do not require grinding down neighboring healthy teeth, and they preserve jawbone density while functioning just like natural teeth.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I reach Dr Nawaf's Dental Clinic in Mahim West?</span>
+                        <i class="fa-solid fa-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>The clinic is located at <strong>24, Gopal Bhavan, Kapad Bazar, Mahim West, Mumbai</strong>, right next to Jain Mandir and adjacent to MediCheck. It is just a 5-minute walk from Mahim railway station and easily accessible from the Western Express Highway.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What sterilization and hygiene protocols do you follow?</span>
+                        <i class="fa-solid fa-chevron-down faq-arrow"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>We maintain strict medical-grade hygiene. All non-disposable instruments undergo ultrasonic cleaning, vacuum sealing in sterilization pouches, and hospital-grade autoclave autoclaving. Single-use disposables (gloves, suction tips, needles, bibs) are discarded immediately after each patient.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cta-card">
+                <div class="faq-cta-content">
+                    <h3>Have a question not listed here?</h3>
+                    <p>Dr. Nawaf is happy to assist. Send your dental query directly or book a consultation.</p>
+                </div>
+                <div class="faq-cta-actions">
+                    <a href="contact.html" class="btn btn-secondary">Contact Clinic</a>
+                    <a href="appointment.html" class="btn btn-primary">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo-placeholder small">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <h3>Dr Nawaf's Dental Clinic</h3>
+                <p>Delivering high-precision dental treatments and compassionate oral healthcare in Mumbai.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Meet Dr. Nawaf</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="appointment.html">Book an Appointment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 24, Gopal Bhavan, next to Jain Mandir & MediCheck, Kapad Bazar, Mahim West, Mumbai 400016</p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:8108736216">8108736216</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dr Nawaf's Dental Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr Nawaf's Dental Clinic - Mahim West, Mumbai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP CDN & ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-placeholder">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Dr Nawaf's</span>
+                    <span class="brand-sub">Dental Clinic</span>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-item active">Home</a>
+                <a href="about.html" class="nav-item">Meet Dr. Nawaf</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="gallery.html" class="nav-item">Photo Gallery</a>
+                <a href="faqs.html" class="nav-item">FAQs</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+                <a href="appointment.html" class="nav-cta">
+                    <i class="fa-regular fa-calendar-check"></i> Book an Appointment
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero" id="heroSection">
+            <!-- Background Ambient Canvas with Free-Floating Interactive Tooth -->
+            <div class="hero-bg-floating-layer" id="heroBgLayer">
+                <div class="bg-blur-glow"></div>
+                <div class="bg-drifting-tooth" id="bgDriftingTooth" title="Click me for a sparkle burst!">
+                    <div class="bg-tooth-aura" id="bgToothAura"></div>
+                    <svg class="bg-tooth-svg" viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="bgToothGrad" x1="20" y1="20" x2="180" y2="230" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#ffffff"/>
+                                <stop offset="45%" stop-color="#f0f9ff"/>
+                                <stop offset="85%" stop-color="#bae6fd"/>
+                                <stop offset="100%" stop-color="#38bdf8"/>
+                            </linearGradient>
+                            <linearGradient id="bgShineGrad" x1="40" y1="30" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+                                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                            </linearGradient>
+                            <filter id="bgToothShadow" x="-20%" y="-20%" width="140%" height="150%" filterUnits="userSpaceOnUse">
+                                <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0284c7" flood-opacity="0.25"/>
+                            </filter>
+                        </defs>
+                        <path d="M100 24C65 24 45 42 35 68C23 99 27 138 42 168C53 190 62 216 76 226C84 232 93 218 97 195C99 184 100 176 100 176C100 176 101 184 103 195C107 218 116 232 124 226C138 216 147 190 158 168C173 138 177 99 165 68C155 42 135 24 100 24Z" 
+                              fill="url(#bgToothGrad)" filter="url(#bgToothShadow)"/>
+                        <path d="M72 32C84 37 94 37 100 34C106 37 116 37 128 32C138 42 152 56 156 74C140 60 115 54 100 58C85 54 60 60 44 74C48 56 62 42 72 32Z" 
+                              fill="#ffffff" opacity="0.85"/>
+                        <path d="M52 64C48 85 50 114 58 135C60 115 58 85 64 68C68 58 78 50 88 46C72 48 58 54 52 64Z" 
+                              fill="url(#bgShineGrad)"/>
+                        <circle cx="132" cy="72" r="6" fill="#ffffff" opacity="0.9"/>
+                        <circle cx="142" cy="84" r="3" fill="#ffffff" opacity="0.7"/>
+                    </svg>
+                    <div class="tooth-sparkle spk-1"><i class="fa-solid fa-sparkles"></i></div>
+                    <div class="tooth-sparkle spk-2"><i class="fa-solid fa-sparkles"></i></div>
+                </div>
+            </div>
+
+            <!-- Hero Foreground Content -->
+            <div class="hero-content">
+                <span class="badge"><i class="fa-solid fa-award" style="margin-right: 5px;"></i> Advanced Dental Care & Aesthetics</span>
+                <h1 class="hero-title">Experience Gentle & Modern Dentistry</h1>
+                <p class="hero-subtitle">Comprehensive dental care tailored for you and your family in Mahim West, Mumbai. Crafting healthy, radiant smiles with advanced clinical excellence and zero anxiety.</p>
+                <div class="hero-actions">
+                    <a href="appointment.html" class="btn btn-primary">Book an Appointment</a>
+                    <a href="services.html" class="btn btn-secondary">Explore Services</a>
+                    <a href="about.html" class="btn btn-secondary"><i class="fa-solid fa-user-doctor" style="margin-right: 6px;"></i> Meet Dr. Nawaf</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-num">5.0 ★</span>
+                        <span class="stat-label">Google Rating</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">Mahim West</span>
+                        <span class="stat-label">Near Jain Mandir</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">100% Sterile</span>
+                        <span class="stat-label">Hospital-Grade Autoclave</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick About Summary -->
+        <section class="section about-summary">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Welcome to Dr Nawaf's Dental Clinic</h2>
+                    <p>Located next to Jain Mandir & MediCheck on Kapad Bazar road, Mahim West, we combine state-of-the-art dental technology with a calm, patient-first approach.</p>
+                </div>
+                
+                <div class="highlights-grid">
+                    <div class="highlight-box">
+                        <i class="fa-solid fa-hand-holding-medical"></i>
+                        <h3>Gentle Treatments</h3>
+                        <p>Minimally invasive and pain-managed procedures designed for anxiety-free visits.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <i class="fa-solid fa-shield-virus"></i>
+                        <h3>Highest Sterilization</h3>
+                        <p>Strict multi-step hospital-grade sterilization protocols for complete safety.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3>Dedicated Time</h3>
+                        <p>Individualized one-on-one appointments without rushed consultations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GSAP INTERACTIVE 2: The Tooth Shield & Clinical Defense System -->
+        <section class="section tooth-shield-section" id="shieldSection">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="badge"><i class="fa-solid fa-shield-halved" style="margin-right: 5px;"></i> Advanced Clinical Protection</span>
+                    <h2>The 360° Smile Defense Standard</h2>
+                    <p>How Dr. Nawaf shields your oral health against decay, bacterial infections, and procedural discomfort.</p>
+                </div>
+
+                <div class="shield-interactive-container">
+                    <!-- Central Shielded Tooth -->
+                    <div class="shield-center-hub">
+                        <div class="shield-pulse-ring ring-1"></div>
+                        <div class="shield-pulse-ring ring-2"></div>
+                        <div class="shield-orbit-circle">
+                            <div class="orbiting-particle part-1"></div>
+                            <div class="orbiting-particle part-2"></div>
+                            <div class="orbiting-particle part-3"></div>
+                        </div>
+
+                        <!-- Shield Badge Graphic -->
+                        <div class="shield-tooth-core" id="shieldToothCore">
+                            <div class="shield-glow-backdrop"></div>
+                            <svg class="shield-svg" viewBox="0 0 160 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M80 16C50 16 34 32 26 54C16 80 20 112 32 138C40 156 48 174 58 182C64 187 72 176 75 158C77 149 78 142 80 142C82 142 83 149 85 158C88 176 96 187 102 182C112 174 120 156 128 138C140 112 144 80 134 54C126 32 110 16 80 16Z" 
+                                      fill="url(#shieldToothGrad)"/>
+                                <path d="M42 50C40 70 42 95 48 112C50 96 48 70 54 54C56 46 64 40 72 36C58 38 46 42 42 50Z" 
+                                      fill="#ffffff" opacity="0.8"/>
+                                <defs>
+                                    <linearGradient id="shieldToothGrad" x1="20" y1="20" x2="140" y2="180" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0%" stop-color="#ffffff"/>
+                                        <stop offset="60%" stop-color="#e0f2fe"/>
+                                        <stop offset="100%" stop-color="#38bdf8"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="shield-status-pill">
+                                <i class="fa-solid fa-lock"></i>
+                                <span>100% Protected</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orbiting Defense Pillars (Triggered via GSAP on Scroll) -->
+                    <div class="shield-pillars-grid">
+                        <div class="defense-node node-left node-1">
+                            <div class="node-icon"><i class="fa-solid fa-pump-medical"></i></div>
+                            <div class="node-body">
+                                <h4>Hospital-Grade Sterilization</h4>
+                                <p>Autoclave Class-B vacuum sterilization for zero cross-contamination risk.</p>
+                            </div>
+                        </div>
+
+                        <div class="defense-node node-right node-2">
+                            <div class="node-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <div class="node-body">
+                                <h4>Enamel-Safe Treatments</h4>
+                                <p>Conservative, bio-compatible materials preserving healthy tooth structure.</p>
+                            </div>
+                        </div>
+
+                        <div class="defense-node node-left node-3">
+                            <div class="node-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                            <div class="node-body">
+                                <h4>Gentle Pain Management</h4>
+                                <p>Modern painless anaesthesia protocols designed specifically for anxious patients.</p>
+                            </div>
+                        </div>
+
+                        <div class="defense-node node-right node-4">
+                            <div class="node-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                            <div class="node-body">
+                                <h4>Deep Bacterial Defense</h4>
+                                <p>Ultrasonic periodontal scaling that guards your gums against bone-loss and gingivitis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Google Reviews & Patient Testimonials -->
+        <section class="section reviews-section">
+            <div class="section-container">
+                <div class="reviews-header-block">
+                    <div class="reviews-title-wrap">
+                        <span class="badge"><i class="fa-brands fa-google" style="margin-right: 5px; color: #ea4335;"></i> Google Maps Verified</span>
+                        <h2>What Our Patients Say</h2>
+                        <p>Real experiences from patients treated at our Mahim West dental practice.</p>
+                    </div>
+
+                    <div class="google-rating-summary-card">
+                        <div class="g-logo-row">
+                            <i class="fa-brands fa-google" style="color: #4285F4; font-size: 1.8rem;"></i>
+                            <span class="g-rating-text">Google Reviews</span>
+                        </div>
+                        <div class="g-score-row">
+                            <span class="g-score">5.0</span>
+                            <div class="g-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="g-subtext">Based on Mahim West clinic feedback</p>
+                        <a href="https://maps.app.goo.gl/RA8Sdu5gH7FVzo4n6" target="_blank" rel="noopener noreferrer" class="btn btn-secondary g-map-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 6px;"></i> View on Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="reviews-grid">
+                    <!-- Review 1: Anurup Nadkarni -->
+                    <div class="review-card">
+                        <div class="review-top">
+                            <div class="reviewer-avatar av-blue">A</div>
+                            <div class="reviewer-meta">
+                                <h4>Anurup Nadkarni</h4>
+                                <span class="review-tag"><i class="fa-solid fa-circle-check"></i> Local Guide</span>
+                                <div class="review-meta-sub">136 reviews • 16 photos</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="review-time">Verified Google Review</span>
+                        </div>
+                        <p class="review-text">"Highly skilled doctor. My tooth extraction was done at Dr. Nawaf's dental trust clinic. Best tooth treatment at affordable price. I will recommend him for people facing dental health issues."</p>
+                    </div>
+
+                    <!-- Review 2: Umar Ticklye -->
+                    <div class="review-card">
+                        <div class="review-top">
+                            <div class="reviewer-avatar av-teal">U</div>
+                            <div class="reviewer-meta">
+                                <h4>Umar Ticklye</h4>
+                                <span class="review-tag"><i class="fa-solid fa-circle-check"></i> Local Guide</span>
+                                <div class="review-meta-sub">13 reviews • 28 photos</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="review-time">Verified Google Review</span>
+                        </div>
+                        <p class="review-text">"Very hygienic clinic and the doctor is very friendly... he did my tooth extraction and cleaning so nicely i almost didn't feel any pain! 👌🏻"</p>
+                        
+                        <div class="review-owner-response">
+                            <div class="owner-title"><i class="fa-solid fa-reply"></i> Response from Dr Nawaf (Owner)</div>
+                            <p style="margin: 0; font-style: normal;">"Thank you very much for your review kind sir..."</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 3: Niharika -->
+                    <div class="review-card">
+                        <div class="review-top">
+                            <div class="reviewer-avatar av-purple">N</div>
+                            <div class="reviewer-meta">
+                                <h4>Niharika</h4>
+                                <span class="review-tag"><i class="fa-solid fa-circle-check"></i> Verified Patient</span>
+                                <div class="review-meta-sub">2 reviews • 8 photos</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="review-time">Verified Google Review</span>
+                        </div>
+                        <p class="review-text">"5-star dental clinic experience. Professional, hygienic, and caring dental treatment."</p>
+                        
+                        <div class="review-owner-response">
+                            <div class="owner-title"><i class="fa-solid fa-reply"></i> Response from Dr Nawaf (Owner)</div>
+                            <p style="margin: 0; font-style: normal;">"Thank you for your review..."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Contact Banner -->
+        <section class="quick-contact-banner">
+            <div class="banner-container">
+                <div class="banner-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Clinic Location</h4>
+                        <p>24, Gopal Bhavan, Kapad Bazar, Mahim West, Mumbai 400016</p>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Call / WhatsApp</h4>
+                        <p><a href="tel:8108736216">+91 8108736216</a></p>
+                    </div>
+                </div>
+                <div class="banner-cta">
+                    <a href="appointment.html" class="btn btn-primary">Schedule Visit</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo-placeholder small">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <h3>Dr Nawaf's Dental Clinic</h3>
+                <p>Delivering high-precision dental treatments and compassionate oral healthcare in Mumbai.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Meet Dr. Nawaf</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="appointment.html">Book an Appointment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 24, Gopal Bhavan, next to Jain Mandir & MediCheck, Kapad Bazar, Mahim West, Mumbai 400016</p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:8108736216">8108736216</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dr Nawaf's Dental Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

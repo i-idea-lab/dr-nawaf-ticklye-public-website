@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery & Before-After - Dr Nawaf's Dental Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-placeholder">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Dr Nawaf's</span>
+                    <span class="brand-sub">Dental Clinic</span>
+                </div>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">Meet Dr. Nawaf</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="gallery.html" class="nav-item active">Photo Gallery</a>
+                <a href="faqs.html" class="nav-item">FAQs</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+                <a href="appointment.html" class="nav-cta">
+                    <i class="fa-regular fa-calendar-check"></i> Book an Appointment
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <h1>Photo Gallery & Smile Transformations</h1>
+        <p>Explore our Mahim West facility, sterile clinical environment, and interact with our Before & After smile comparison sliders below.</p>
+    </section>
+
+    <!-- SECTION 1: Interactive Before & After Smile Comparison -->
+    <section class="section before-after-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="badge">Interactive Transformations</span>
+                <h2>Before & After Smile Makeovers</h2>
+                <p>Drag the slider left and right to inspect clinical transformations performed with cosmetic bonding, teeth whitening, and alignment.</p>
+            </div>
+
+            <div class="ba-grid">
+                <!-- Case 1: Teeth Whitening & Polishing -->
+                <div class="ba-card">
+                    <div class="ba-comparison" data-slider="ba1">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80" alt="After Whitening Treatment" class="ba-img-after">
+                        <div class="ba-overlay-before">
+                            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80" alt="Before Whitening Treatment" class="ba-img-before">
+                        </div>
+                        <span class="ba-label label-before">Before</span>
+                        <span class="ba-label label-after">After</span>
+                        <input type="range" min="0" max="100" value="50" class="ba-range-input" aria-label="Compare Before and After">
+                        <div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div>
+                    </div>
+                    <div class="ba-info">
+                        <h4>Teeth Whitening & Stain Removal</h4>
+                        <p>Removal of deep coffee, tea, and age discolorations in a single in-clinic session.</p>
+                    </div>
+                </div>
+
+                <!-- Case 2: Composite Gap Closure & Veneers -->
+                <div class="ba-card">
+                    <div class="ba-comparison" data-slider="ba2">
+                        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=900&q=80" alt="After Veneer Application" class="ba-img-after">
+                        <div class="ba-overlay-before">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80" alt="Before Veneer Application" class="ba-img-before">
+                        </div>
+                        <span class="ba-label label-before">Before</span>
+                        <span class="ba-label label-after">After</span>
+                        <input type="range" min="0" max="100" value="50" class="ba-range-input" aria-label="Compare Before and After">
+                        <div class="ba-handle"><i class="fa-solid fa-arrows-left-right"></i></div>
+                    </div>
+                    <div class="ba-info">
+                        <h4>Aesthetic Smile Alignment & Veneers</h4>
+                        <p>Diastema gap closure and restoration of chipped anterior enamel for a harmonious smile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Clinic Facilities Gallery (With Carousel Lightbox) -->
+    <main class="section" style="padding-top: 1rem;">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="badge">Clinic Environment</span>
+                <h2>Tour Our Mahim West Clinic</h2>
+                <p>Click on any gallery card to open the complete multi-photo carousel viewer.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-card" data-category="reception" role="button" tabindex="0">
+                    <div class="gallery-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" alt="Reception Area" loading="lazy">
+                        <div class="gallery-badge"><i class="fa-solid fa-images"></i> 4 Photos</div>
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Gallery</span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Warm Reception & Lounge</h4>
+                        <p>Comfortable, sanitized, and relaxing environment for our patients.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-card" data-category="operatory" role="button" tabindex="0">
+                    <div class="gallery-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Operatory Dental Chair" loading="lazy">
+                        <div class="gallery-badge"><i class="fa-solid fa-images"></i> 4 Photos</div>
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Gallery</span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Ergonomic Treatment Suites</h4>
+                        <p>Equipped with modern dental chairs designed for patient comfort.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-card" data-category="sterilization" role="button" tabindex="0">
+                    <div class="gallery-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" alt="Sterilization Station" loading="lazy">
+                        <div class="gallery-badge"><i class="fa-solid fa-images"></i> 4 Photos</div>
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Gallery</span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Multi-Stage Sterilization Hub</h4>
+                        <p>Hospital-grade autoclave systems ensuring 100% infection control.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-card" data-category="radiography" role="button" tabindex="0">
+                    <div class="gallery-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="Digital Radiography" loading="lazy">
+                        <div class="gallery-badge"><i class="fa-solid fa-images"></i> 4 Photos</div>
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Gallery</span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Digital Radiography & RVG</h4>
+                        <p>Low-radiation instant imaging for fast and accurate diagnoses.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-card" data-category="cosmetic" role="button" tabindex="0">
+                    <div class="gallery-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80" alt="Cosmetic Smile Restorations" loading="lazy">
+                        <div class="gallery-badge"><i class="fa-solid fa-images"></i> 4 Photos</div>
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Gallery</span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Cosmetic Smile Transformations</h4>
+                        <p>Aesthetic results delivering bright, natural, and confident smiles.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-card" data-category="instruments" role="button" tabindex="0">
+                    <div class="gallery-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1583912267670-6575ad472688?auto=format&fit=crop&w=600&q=80" alt="Precision Instruments" loading="lazy">
+                        <div class="gallery-badge"><i class="fa-solid fa-images"></i> 4 Photos</div>
+                        <div class="gallery-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            <span>View Gallery</span>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Rotary & Microsurgical Tools</h4>
+                        <p>Modern precision tools for gentle root canals, implants, and cleanings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Carousel Lightbox Modal Layer -->
+    <div class="carousel-modal" id="carouselModal" role="dialog" aria-modal="true" aria-label="Photo Carousel">
+        <div class="carousel-backdrop"></div>
+        <div class="carousel-box">
+            <div class="carousel-header">
+                <div>
+                    <h3 id="carouselTitle">Gallery Photos</h3>
+                    <span id="carouselCounter" class="carousel-counter">1 / 4</span>
+                </div>
+                <button class="carousel-close-btn" id="carouselClose" aria-label="Close Carousel">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="carousel-viewport">
+                <button class="carousel-nav-btn prev" id="carouselPrev" aria-label="Previous Photo">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-slide-content">
+                    <img id="carouselImg" src="" alt="Gallery Image">
+                </div>
+
+                <button class="carousel-nav-btn next" id="carouselNext" aria-label="Next Photo">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="carousel-footer">
+                <p id="carouselCaption" class="carousel-caption"></p>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo-placeholder small">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <h3>Dr Nawaf's Dental Clinic</h3>
+                <p>Delivering high-precision dental treatments and compassionate oral healthcare in Mumbai.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Meet Dr. Nawaf</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="appointment.html">Book an Appointment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 24, Gopal Bhavan, next to Jain Mandir & MediCheck, Kapad Bazar, Mahim West, Mumbai 400016</p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:8108736216">8108736216</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dr Nawaf's Dental Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

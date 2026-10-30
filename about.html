@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Dr. Nawaf - Dr Nawaf's Dental Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-placeholder">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Dr Nawaf's</span>
+                    <span class="brand-sub">Dental Clinic</span>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item active">Meet Dr. Nawaf</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="gallery.html" class="nav-item">Photo Gallery</a>
+                <a href="faqs.html" class="nav-item">FAQs</a>
+                <a href="contact.html" class="nav-item">Contact Us</a>
+                <a href="appointment.html" class="nav-cta">
+                    <i class="fa-regular fa-calendar-check"></i> Book an Appointment
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <h1>Meet Dr. Nawaf</h1>
+        <p>Dedicated to ethical, gentle, and modern dental healthcare in Mahim West, Mumbai.</p>
+    </section>
+
+    <!-- Doctor Profile Main -->
+    <main class="section">
+        <div class="section-container">
+            <div class="doctor-profile-grid">
+                <!-- Doctor Image & Quick Info -->
+                <div class="doctor-media-col">
+                    <div class="doctor-photo-card">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Dr. Nawaf - Chief Dental Surgeon" class="doctor-img">
+                        <div class="doctor-photo-badge">
+                            <i class="fa-solid fa-certificate"></i>
+                            <div>
+                                <strong>Chief Dental Surgeon</strong>
+                                <span>Dr Nawaf's Dental Clinic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doctor-meta-card">
+                        <div class="meta-item">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <div>
+                                <h5>Qualifications</h5>
+                                <p>B.D.S. (Bachelor of Dental Surgery)</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h5>Practice Location</h5>
+                                <p>Mahim West, Mumbai 400016</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fa-solid fa-language"></i>
+                            <div>
+                                <h5>Languages Spoken</h5>
+                                <p>English, Hindi, Marathi, Urdu</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h5>Direct Consultation</h5>
+                                <p><a href="tel:8108736216">+91 8108736216</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor Bio & Clinical Values -->
+                <div class="doctor-content-col">
+                    <span class="badge">Professional Profile</span>
+                    <h2>"Dentistry with Compassion, Precision & Zero Pain"</h2>
+                    <p class="lead-text">
+                        Welcome to Dr Nawaf's Dental Clinic. Dr. Nawaf is a passionate dental clinician recognized for a calming chairside manner, high procedural precision, and an unwavering commitment to patient satisfaction.
+                    </p>
+
+                    <div class="bio-body">
+                        <h3>Clinical Philosophy</h3>
+                        <p>
+                            At our Mahim West practice, we believe dental visits should never be intimidating or painful. Dr. Nawaf focuses on minimally invasive dentistry, preserving natural tooth structure wherever possible, and employing advanced pain-management techniques. Each patient receives a comprehensive, unhurried diagnosis where treatment options are explained transparently before any procedure begins.
+                        </p>
+
+                        <h3>Key Areas of Expertise</h3>
+                        <div class="expertise-grid">
+                            <div class="expertise-item">
+                                <i class="fa-solid fa-tooth"></i>
+                                <span>Single-Visit & Rotary Endodontics (Root Canal)</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fa-solid fa-teeth-open"></i>
+                                <span>Cosmetic Veneers & Smile Designing</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <span>In-Clinic Teeth Whitening & Enamel Care</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Fixed Prosthodontics (Crowns & Bridges)</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fa-solid fa-hospital-user"></i>
+                                <span>Preventive Dentistry & Periodontal Scaling</span>
+                            </div>
+                            <div class="expertise-item">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span>Emergency Pain Relief & Dental Trauma Care</span>
+                            </div>
+                        </div>
+
+                        <h3>Core Clinical Commitments</h3>
+                        <ul class="commitments-list">
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Hospital-Grade Sterilization:</strong> Every instrument undergoes 100% autoclave vacuum sterilization, ensuring maximum patient safety.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Transparent & Ethical Advice:</strong> No unnecessary treatments or hidden charges. Clear, upfront treatment plans.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Patient Comfort First:</strong> Gentle hands, modern topical anaesthesia, and a soothing clinical environment.</li>
+                        </ul>
+
+                        <div class="doctor-cta-box">
+                            <div>
+                                <h4>Ready to consult Dr. Nawaf?</h4>
+                                <p>Book a personalized, one-on-one consultation today.</p>
+                            </div>
+                            <a href="appointment.html" class="btn btn-primary">Schedule Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo-placeholder small">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <h3>Dr Nawaf's Dental Clinic</h3>
+                <p>Delivering high-precision dental treatments and compassionate oral healthcare in Mumbai.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Meet Dr. Nawaf</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="appointment.html">Book an Appointment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 24, Gopal Bhavan, next to Jain Mandir & MediCheck, Kapad Bazar, Mahim West, Mumbai 400016</p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:8108736216">8108736216</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dr Nawaf's Dental Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
