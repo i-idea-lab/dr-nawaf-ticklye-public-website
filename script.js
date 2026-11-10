@@ -582,17 +582,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Storage error:", err);
             }
 
+            let waMsg = `*New Inquiry - Dr Nawaf's Dental Clinic*\n`;
+            waMsg += `👤 Name: ${name}\n`;
+            waMsg += `📞 Phone: ${phone}\n`;
+            if (email) waMsg += `✉️ Email: ${email}\n`;
+            waMsg += `💬 Message: ${message}`;
+
+            const waUrl = `https://wa.me/918108736216?text=${encodeURIComponent(waMsg)}`;
+
             if (contactSuccessMsg) {
                 contactSuccessMsg.style.display = "block";
             }
-            contactForm.reset();
-
-            const waText = encodeURIComponent(`Hello Dr Nawaf's Dental Clinic,\nMy Name: ${name}\nPhone: ${phone}\nMessage: ${message}`);
             const waButton = document.getElementById("waContactBtn");
             if (waButton) {
-                waButton.href = `https://wa.me/918108736216?text=${waText}`;
+                waButton.href = waUrl;
                 waButton.style.display = "inline-flex";
             }
+
+            contactForm.reset();
+
+            // Direct WhatsApp launch with prefilled message
+            window.open(waUrl, "_blank");
         });
     }
 
