@@ -628,7 +628,7 @@ a {
 .hero-subtitle {
     font-size: 1.15rem;
     color: var(--text-muted);
-    max-width: 700px;
+    max-width: 860px;
     margin: 0 auto 2.2rem;
     font-weight: 400;
 }
@@ -687,7 +687,7 @@ a {
 
 .section-header {
     text-align: center;
-    max-width: 700px;
+    max-width: 850px;
     margin: 0 auto 3rem;
 }
 
@@ -764,8 +764,9 @@ a {
 .page-hero p {
     color: var(--text-muted);
     font-size: 1.1rem;
-    max-width: 900px;
+    max-width: 1050px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* ============================
