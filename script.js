@@ -582,11 +582,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Storage error:", err);
             }
 
-            let waMsg = `*New Inquiry - Dr Nawaf's Dental Clinic*\n`;
-            waMsg += `👤 Name: ${name}\n`;
-            waMsg += `📞 Phone: ${phone}\n`;
-            if (email) waMsg += `✉️ Email: ${email}\n`;
-            waMsg += `💬 Message: ${message}`;
+            let waMsg = `*New Inquiry - Dr Nawaf's Dental Clinic*\n\n`;
+            waMsg += `\u{1F464} *Name:* ${name}\n`;
+            waMsg += `\u{1F4DE} *Phone:* ${phone}\n`;
+            if (email) waMsg += `\u{2709}\u{FE0F} *Email:* ${email}\n`;
+            waMsg += `\u{1F4AC} *Message:* ${message}`;
 
             const waUrl = `https://wa.me/918108736216?text=${encodeURIComponent(waMsg)}`;
 
@@ -644,14 +644,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Storage error:", err);
             }
 
-            let waMsg = `*New Appointment Request - Dr Nawaf's Dental Clinic*\n`;
-            waMsg += `👤 Patient: ${name}\n`;
-            waMsg += `📞 Phone: ${phone}\n`;
-            if (email) waMsg += `✉️ Email: ${email}\n`;
-            waMsg += `📅 Date: ${date}\n`;
-            waMsg += `⏰ Slot: ${timeSlot}\n`;
-            waMsg += `🦷 Treatment: ${service}\n`;
-            if (notes) waMsg += `📝 Notes/Symptoms: ${notes}`;
+            let waMsg = `*New Appointment Request - Dr Nawaf's Dental Clinic*\n\n`;
+            waMsg += `\u{1F464} *Patient Name:* ${name}\n`;
+            waMsg += `\u{1F4DE} *Phone:* ${phone}\n`;
+            if (email) waMsg += `\u{2709}\u{FE0F} *Email:* ${email}\n`;
+            waMsg += `\u{1F4C5} *Date:* ${date}\n`;
+            waMsg += `\u{23F0} *Time Slot:* ${timeSlot}\n`;
+            waMsg += `\u{1F9B7} *Treatment:* ${service}\n`;
+            if (notes) waMsg += `\u{1F4DD} *Notes/Symptoms:* ${notes}`;
 
             const waUrl = `https://wa.me/918108736216?text=${encodeURIComponent(waMsg)}`;
 
