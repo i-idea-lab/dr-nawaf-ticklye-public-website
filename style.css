@@ -1089,10 +1089,6 @@ a {
     margin: 1.2rem 0 2rem;
 }
 
-.expertise-item:last-child:nth-child(odd) {
-    grid-column: span 2;
-}
-
 .expertise-item {
     background: #ffffff;
     border: 1px solid var(--border-color);
@@ -2130,10 +2126,6 @@ a {
 
     .expertise-grid {
         grid-template-columns: 1fr;
-    }
-
-    .expertise-item:last-child:nth-child(odd) {
-        grid-column: auto;
     }
 
     .footer-container {
