@@ -1123,20 +1123,34 @@ a {
 .commitments-list li {
     font-size: 0.96rem;
     color: #334155;
-    padding: 8px 0;
+    padding: 10px 0;
     display: flex;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 16px;
     line-height: 1.6;
 }
 
 .commitments-list li i {
     color: #16a34a;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-top: 3px;
     width: 20px;
     min-width: 20px;
     text-align: center;
     flex-shrink: 0;
+}
+
+.commitments-list li strong {
+    width: 220px;
+    min-width: 220px;
+    flex-shrink: 0;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.commitments-list li span {
+    flex: 1;
+    color: #475569;
 }
 
 .doctor-cta-box {
@@ -2138,6 +2152,21 @@ a {
 
     .expertise-grid {
         grid-template-columns: 1fr;
+    }
+
+    .commitments-list li {
+        flex-wrap: wrap;
+        gap: 6px 12px;
+    }
+
+    .commitments-list li strong {
+        width: calc(100% - 35px);
+        min-width: 0;
+    }
+
+    .commitments-list li span {
+        width: 100%;
+        padding-left: 32px;
     }
 
     .footer-container {
