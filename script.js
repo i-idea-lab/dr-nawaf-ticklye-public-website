@@ -611,6 +611,28 @@ document.addEventListener("DOMContentLoaded", () => {
     // ----------------------------------------------------
     const appointmentForm = document.getElementById("appointmentForm");
     const appointmentSuccessMsg = document.getElementById("appointmentSuccessMsg");
+    const pDateInput = document.getElementById("pDate");
+
+    // Restrict date picker so past dates cannot be selected
+    const getTodayDateString = () => {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        const day = String(now.getDate()).padStart(2, "0");
+        return `${year}-${month}-${day}`;
+    };
+
+    if (pDateInput) {
+        const todayStr = getTodayDateString();
+        pDateInput.min = todayStr;
+
+        pDateInput.addEventListener("change", () => {
+            if (pDateInput.value && pDateInput.value < todayStr) {
+                alert("Please select today or a future date for your appointment.");
+                pDateInput.value = todayStr;
+            }
+        });
+    }
 
     if (appointmentForm) {
         appointmentForm.addEventListener("submit", (e) => {
@@ -623,6 +645,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const timeSlot = document.getElementById("pTime").value;
             const service = document.getElementById("serviceType").value;
             const notes = document.getElementById("notes") ? document.getElementById("notes").value.trim() : "";
+
+            const todayStr = getTodayDateString();
+            if (date < todayStr) {
+                alert("Appointments cannot be booked for past dates. Please select today or a future date.");
+                if (pDateInput) pDateInput.focus();
+                return;
+            }
 
             const booking = {
                 id: Date.now(),
