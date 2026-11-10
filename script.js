@@ -111,25 +111,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const bgToothAura = document.getElementById("bgToothAura");
 
     if (bgDriftingTooth && typeof gsap !== "undefined") {
-        // Wide-roaming drift: starts bottom-right, sweeps across the full hero banner
-        // x/y are relative offsets from the CSS bottom-right anchor.
-        // Negative x = moves left, Negative y = moves up.
-        // Waypoints are set as absolute targets (NOT yoyo) so the tooth traces a full loop.
+        // Wide-roaming perimeter orbit: starts at Center-Right margin,
+        // sweeps naturally around the outer edges of the hero banner.
+        // x/y are relative offsets from the CSS center-right anchor.
+        // Negative x = moves left, Negative y = moves up, Positive y = moves down.
         const driftTl = gsap.timeline({ repeat: -1, defaults: { ease: "sine.inOut" } });
         driftTl
-            // 1. Drift to bottom-left corner
-            .to(bgDriftingTooth, { x: -420, y: 0,    rotation: -10, duration: 9 })
-            // 2. Arc up to top-left corner
-            .to(bgDriftingTooth, { x: -460, y: -280, rotation:   6, duration: 8 })
-            // 3. Glide across to top-right (near start, but up high)
-            .to(bgDriftingTooth, { x: -80,  y: -300, rotation:  10, duration: 9 })
-            // 4. Drift to center of banner
-            .to(bgDriftingTooth, { x: -240, y: -150, rotation:  -5, duration: 7 })
-            // 5. Sink back to bottom-right origin
-            .to(bgDriftingTooth, { x: 0,    y: 0,    rotation:   0, duration: 8 });
+            // 1. Gently rise into top-right margin
+            .to(bgDriftingTooth, { x: -40,  y: -90,  rotation: 6,  duration: 6 })
+            // 2. High top-right corner
+            .to(bgDriftingTooth, { x: -100, y: -160, rotation: -6, duration: 7 })
+            // 3. Glide across top banner (above title text)
+            .to(bgDriftingTooth, { x: -550, y: -170, rotation: 8,  duration: 9 })
+            // 4. Descend into left margin (outside text on left)
+            .to(bgDriftingTooth, { x: -720, y: -50,  rotation: -7, duration: 8 })
+            // 5. Bob in center-left margin (clear of buttons)
+            .to(bgDriftingTooth, { x: -750, y: 60,   rotation: 6,  duration: 7 })
+            // 6. Drift down to bottom-left (below stats)
+            .to(bgDriftingTooth, { x: -580, y: 160,  rotation: -8, duration: 8 })
+            // 7. Sweep across bottom perimeter
+            .to(bgDriftingTooth, { x: -240, y: 170,  rotation: 7,  duration: 9 })
+            // 8. Return back to center-right origin
+            .to(bgDriftingTooth, { x: 0,    y: 0,    rotation: 0,  duration: 8 });
 
         // Click trigger: True HORIZONTAL 360 spin + High-visibility Aura & Sparkle burst
-        bgDriftingTooth.addEventListener("click", () => {
+        bgDriftingTooth.addEventListener("click", (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+
             // Horizontal 360° flip (rotationY) with bouncy ease
             gsap.fromTo(bgDriftingTooth,
                 { rotationY: 0, scale: 0.95 },
