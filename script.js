@@ -551,10 +551,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ----------------------------------------------------
-    // 7. Contact Form Handler (LocalStorage + WhatsApp Option)
+    // 7. Contact Form Handler (LocalStorage + Direct WhatsApp Request)
     // ----------------------------------------------------
     const contactForm = document.getElementById("contactForm");
-    const contactSuccessMsg = document.getElementById("contactSuccessMsg");
 
     if (contactForm) {
         contactForm.addEventListener("submit", (e) => {
@@ -590,15 +589,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const waUrl = `https://wa.me/918108736216?text=${encodeURIComponent(waMsg)}`;
 
-            if (contactSuccessMsg) {
-                contactSuccessMsg.style.display = "block";
-            }
-            const waButton = document.getElementById("waContactBtn");
-            if (waButton) {
-                waButton.href = waUrl;
-                waButton.style.display = "inline-flex";
-            }
-
             contactForm.reset();
 
             // Direct WhatsApp launch with prefilled message
@@ -610,7 +600,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // 8. Appointment Form Handler (LocalStorage + Direct WhatsApp Booking)
     // ----------------------------------------------------
     const appointmentForm = document.getElementById("appointmentForm");
-    const appointmentSuccessMsg = document.getElementById("appointmentSuccessMsg");
     const pDateInput = document.getElementById("pDate");
 
     // Restrict date picker so past dates cannot be selected
@@ -683,15 +672,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (notes) waMsg += `\u{1F4DD} *Notes/Symptoms:* ${notes}`;
 
             const waUrl = `https://wa.me/918108736216?text=${encodeURIComponent(waMsg)}`;
-
-            if (appointmentSuccessMsg) {
-                appointmentSuccessMsg.style.display = "block";
-            }
-            const waApptBtn = document.getElementById("waApptBtn");
-            if (waApptBtn) {
-                waApptBtn.href = waUrl;
-                waApptBtn.style.display = "inline-flex";
-            }
 
             appointmentForm.reset();
 
