@@ -1101,10 +1101,15 @@ a {
     padding: 0.85rem 1.2rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-weight: 600;
     font-size: 0.92rem;
     color: #1e293b;
+    min-height: 70px;
+}
+
+.expertise-item span {
+    line-height: 1.4;
 }
 
 .expertise-item i {
