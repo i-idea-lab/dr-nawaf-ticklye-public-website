@@ -644,26 +644,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Storage error:", err);
             }
 
+            let waMsg = `*New Appointment Request - Dr Nawaf's Dental Clinic*\n`;
+            waMsg += `👤 Patient: ${name}\n`;
+            waMsg += `📞 Phone: ${phone}\n`;
+            if (email) waMsg += `✉️ Email: ${email}\n`;
+            waMsg += `📅 Date: ${date}\n`;
+            waMsg += `⏰ Slot: ${timeSlot}\n`;
+            waMsg += `🦷 Treatment: ${service}\n`;
+            if (notes) waMsg += `📝 Notes/Symptoms: ${notes}`;
+
+            const waUrl = `https://wa.me/918108736216?text=${encodeURIComponent(waMsg)}`;
+
             if (appointmentSuccessMsg) {
                 appointmentSuccessMsg.style.display = "block";
             }
-            appointmentForm.reset();
-
-            const waMsg = encodeURIComponent(
-                `*New Appointment Request - Dr Nawaf's Dental Clinic*\n` +
-                `👤 Patient: ${name}\n` +
-                `📞 Phone: ${phone}\n` +
-                `📅 Date: ${date}\n` +
-                `⏰ Slot: ${timeSlot}\n` +
-                `🦷 Treatment: ${service}\n` +
-                (notes ? `📝 Symptoms/Notes: ${notes}\n` : '')
-            );
-
             const waApptBtn = document.getElementById("waApptBtn");
             if (waApptBtn) {
-                waApptBtn.href = `https://wa.me/918108736216?text=${waMsg}`;
+                waApptBtn.href = waUrl;
                 waApptBtn.style.display = "inline-flex";
             }
+
+            appointmentForm.reset();
+
+            // Direct WhatsApp launch with prefilled message
+            window.open(waUrl, "_blank");
         });
     }
 });
