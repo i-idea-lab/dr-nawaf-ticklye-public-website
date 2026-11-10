@@ -244,6 +244,10 @@ a {
     box-shadow: 0 6px 18px rgba(220, 38, 38, 0.35);
 }
 
+.btn-emergency i {
+    margin-right: 8px;
+}
+
 .btn-emergency:hover {
     background: #b91c1c;
     color: #ffffff;
